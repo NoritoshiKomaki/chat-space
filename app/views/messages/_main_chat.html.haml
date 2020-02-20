@@ -1,0 +1,34 @@
+.main_chat
+  .main_chat__group
+    .group--left
+      .group--left__title
+        グループB
+      .group--left__member
+        Member : yamada
+    .group--right
+      = link_to "Edit", "#", class: "group--right__btn"
+  .main_chat__list
+    .list__member
+      .list__member--left
+        tanaka
+      .list__member--right
+        2019/11/20(Wed) 17:43:01
+    .list__text
+      こんにちは  
+    .list__member
+      .list__member--left
+        tanaka
+      .list__member--right
+        2019/11/20(Wed) 17:43:34
+    .list__text
+      今日は夜から雨
+    .main_chat__form
+      .main_chat__form--left
+        .form_content--left
+          %input{:class => "form_content--left__message", :placeholder => "type a message", :type => "text"}
+        %label{class: "form_content--right"}
+          = icon('fa', 'image')
+          %input{type: "file", class: "hide"}
+      %input{:class => "main_chat__form--right", :type => "submit", :value => "Send"}
+
+        
