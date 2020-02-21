@@ -4,7 +4,7 @@
       .side_title--left
         = current_user.name
       .side_title--right
-        = link_to "#", class: "side_title--right__logo" do
+        = link_to new_group_path, class: "side_title--right__logo" do
           = icon('far', 'edit')
           %sapn<>
         = link_to edit_user_path(current_user), class: "side_title--right__logo" do
