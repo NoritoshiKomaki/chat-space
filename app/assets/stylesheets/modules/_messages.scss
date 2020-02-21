@@ -42,7 +42,7 @@ $lightgray: #999999;
     text-align: right;
     &__logo {
       text-decoration: none;
-      color: #ffffff;
+      color: hsl(0, 0%, 100%);
       margin-left: 5px;
     }
   }
@@ -51,12 +51,18 @@ $lightgray: #999999;
 .side_body {
   padding: 20px 0 40px 0;
   &__title {
+    color: $white;
     font-size: 15px;
     padding-bottom: 5px;
   }
   &__message {
+    color: $white;
     font-size: 11px;
   }
+}
+
+.decoration {
+  text-decoration: none;
 }
 
 .main_chat {
