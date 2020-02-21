@@ -10,8 +10,10 @@
         = link_to edit_user_path(current_user), class: "side_title--right__logo" do
           = icon('fas', 'cog')
   .side_bar__group
-    .side_body
-      .side_body__title
-        techcamp
-      .side_body__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side_body
+        = link_to '#', class: "decoration" do
+          .side_body__title
+            = group.name
+          .side_body__message
+            メッセージはまだありません
