@@ -12,8 +12,8 @@
   .side_bar__group
     - current_user.groups.each do |group|
       .side_body
-        = link_to '#', class: "decoration" do
+        = link_to group_messages_path(group), class: "decoration" do
           .side_body__title
             = group.name
           .side_body__message
-            メッセージはまだありません
+            = group.show_last_message
