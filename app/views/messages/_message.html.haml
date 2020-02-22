@@ -1,0 +1,11 @@
+.message
+  .list__member
+    .list__member--left
+      = message.user.name
+    .list__member--right
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .list__text
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
