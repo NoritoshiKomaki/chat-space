@@ -81,6 +81,7 @@ $lightgray: #999999;
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 0 0 40px;
+    overflow: scroll;
   }
   &__form {
     height: 90px;
