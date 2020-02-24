@@ -6,9 +6,8 @@
       .group--left__member
         %ul
           Member : 
-          %li
-            - @users.each do |user|
-              = user.name
+          - @group.users.each do |user|
+            = user.name
     .group--right
       = link_to "Edit", edit_group_path(@group.id), class: "group--right__btn"
   .main_chat__list
