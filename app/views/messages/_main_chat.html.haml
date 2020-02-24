@@ -13,12 +13,12 @@
       = link_to "Edit", edit_group_path(@group.id), class: "group--right__btn"
   .main_chat__list
     = render @messages
-    = form_for [@group, @message] do |f|  
-      .main_chat__form
-        .main_chat__form--left
-          .form_content--left
-            = f.text_field :content, class: "form_content--left__message", placeholder: "type a message"
-            = f.label :image, class: "form_content--right" do
-              = icon('fa', 'image')
-              = f.file_field :image, class: "hide"
-        = f.submit 'Send', class: "main_chat__form--right"
+  = form_for [@group, @message] do |f|  
+    .main_chat__form
+      .main_chat__form--left
+        .form_content--left
+          = f.text_field :content, class: "form_content--left__message", placeholder: "type a message"
+          = f.label :image, class: "form_content--right" do
+            = icon('fa', 'image')
+            = f.file_field :image, class: "hide"
+      = f.submit 'Send', class: "main_chat__form--right"
