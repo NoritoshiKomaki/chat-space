@@ -4,12 +4,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    @users = @group.users
   end
 
   def create
     @message = @group.messages.new(message_params)
-    @users = @group.users
     if @message.save
       respond_to do |format|
         format.json
