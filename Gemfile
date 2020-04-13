@@ -67,6 +67,7 @@ end
 
 gem 'haml-rails'
 gem 'font-awesome-sass'
+gem 'sassc'
 gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'
